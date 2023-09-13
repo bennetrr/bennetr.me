@@ -1,16 +1,29 @@
 ---
+import { getCollection } from 'astro:content';
+import '@fontsource/inter'
+import '../styles/index.css';
+import Link from "../components/Link.astro";
+import Project from "../components/Project.astro";
 
+const links = await getCollection('links');
+const projects = await getCollection('projects');
 ---
 
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>bennetr</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="link-container">
+			{links.map(x => <Link id={x.id}/>)}
+		</div>
+		<div class="project-container">
+			{projects.map(x => <Project id={x.slug}/>)}
+		</div>
 	</body>
 </html>

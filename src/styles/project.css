@@ -1,0 +1,35 @@
+.project {
+    height: 360px;
+    width: 300px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    color: var(--color-fg);
+    text-decoration: none;
+
+    background: var(--color-overlay);
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.project-title {
+    align-self: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.technology-icon {
+    width: auto;
+    height: 25px;
+}
+
+.technology-icon-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    display: flex;
+    gap: 10px;
+}
