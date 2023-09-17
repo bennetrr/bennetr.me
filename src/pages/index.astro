@@ -40,6 +40,7 @@ const projects = await getCollection("projects");
         <div class="card-container link-container">
             {links.map(x => <Link id={x.id}/>)}
         </div>
+
         <div class="card-container project-container">
             {projects.map(x => <Project id={x.slug}/>)}
         </div>
