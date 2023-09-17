@@ -1,21 +1,24 @@
 ---
-import { getEntry } from 'astro:content'
-import { Image } from 'astro:assets'
-import '../styles/project.css';
+import {getEntry} from "astro:content";
+import {Image} from "astro:assets";
+import "../styles/project.css";
+import "../styles/cards.css";
 
 interface Props {
-    id: string
+    id: string;
 }
 
-const { id } = Astro.props;
-const {data: {title, description, technologies, link}, slug} = await getEntry('projects', id);
+const {id} = Astro.props;
+const {data: {title, description, technologies, link}, slug} = await getEntry("projects", id);
 ---
 
-<a class="project" href={link || `/projects/${slug}`} title={title} target="_blank">
-    <span class="project-title">{title}</span>
-    <p class="project-description">{description}</p>
+<a class="card project-card" href={link || `/projects/${slug}`} title={title} target="_blank">
+    <div class="card-content">
+        <span class="project-title">{title}</span>
+        <p class="project-description">{description}</p>
 
-    <div class="technology-icon-container">
-        {technologies.map(x => <Image class="technology-icon" src={import((`../images/icons/${x}.svg`))} alt={x}/>)}
+        <div class="technology-icon-container">
+            {technologies.map(x => <Image class="technology-icon" src={import((`../images/icons/${x}.svg`))} alt={x}/>)}
+        </div>
     </div>
 </a>

@@ -1,29 +1,49 @@
 ---
-import { getCollection } from 'astro:content';
-import '@fontsource/inter'
-import '../styles/index.css';
+import {getCollection} from "astro:content";
+
+import "@fontsource/inter";
+import "../styles/index.css";
+import "../styles/cards.css";
+
 import Link from "../components/Link.astro";
 import Project from "../components/Project.astro";
 
-const links = await getCollection('links');
-const projects = await getCollection('projects');
+const links = await getCollection("links");
+const projects = await getCollection("projects");
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>bennetr</title>
-	</head>
-	<body>
-		<div class="link-container">
-			{links.map(x => <Link id={x.id}/>)}
-		</div>
-		<div class="project-container">
-			{projects.map(x => <Project id={x.slug}/>)}
-		</div>
-	</body>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+        <meta name="viewport" content="width=device-width"/>
+        <meta name="generator" content={Astro.generator}/>
+        <title>bennetr</title>
+
+        <script>
+            Array.from((document.getElementsByClassName("card-container")))
+                .forEach((cardContainer: HTMLDivElement) => {
+                    cardContainer.onmousemove = event => {
+                        Array.from(cardContainer.children)
+                        .filter(element => element.classList.contains("card"))
+                        .forEach((card: HTMLDivElement) => {
+                            const rect = card.getBoundingClientRect();
+                            card.style.setProperty("--mouse-x", `${event.clientX - rect.left}`);
+                            card.style.setProperty("--mouse-y", `${event.clientY - rect.top}`);
+                        });
+                    };
+                });
+        </script>
+    </head>
+    <body>
+        <div class="card-container link-container">
+            {links.map(x => <Link id={x.id}/>)}
+        </div>
+        <div class="card-container project-container">
+            {projects.map(x => <Project id={x.slug}/>)}
+        </div>
+
+        <div class="bg-pattern"/>
+    </body>
 </html>

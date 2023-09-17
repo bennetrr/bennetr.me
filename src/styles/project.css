@@ -1,17 +1,14 @@
-.project {
-    height: 360px;
+.project-container {
+    --width: 100%;
+    --flex-direction: row;
+    --gap: 40px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    height: 260px;
     width: 300px;
-    padding: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-    color: var(--color-fg);
-    text-decoration: none;
-
-    background: var(--color-overlay);
-    border: 1px solid white;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .project-title {

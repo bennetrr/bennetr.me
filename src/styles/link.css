@@ -1,12 +1,14 @@
-.link {
+.link-container {
+    --width: fit-content;
+    --flex-direction: column;
+    --gap: 20px;
+}
+
+.link-card {
     --dimensions: 50px;
     width: var(--dimensions);
     height: var(--dimensions);
-    padding: 10px;
-
-    background: var(--color-overlay);
-    border: 1px solid white;
-    border-radius: 40%;
+    border-radius: 50%;
 }
 
 .link-icon {
