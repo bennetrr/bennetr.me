@@ -50,14 +50,14 @@ Thanks to Hyperplexed: https://www.youtube.com/watch?v=htGfnF1zN4g
 }
 
 .card::before {
-    --radius: 800px;
-    --alpha: 0.06;
+    --radius: 600px;
+    --alpha: 0.03;
     --z: 3;
 }
 
 .card::after {
-    --radius: 600px;
-    --alpha: 0.4;
+    --radius: 400px;
+    --alpha: 0.2;
     --z: 1;
 }
 
@@ -71,6 +71,6 @@ Thanks to Hyperplexed: https://www.youtube.com/watch?v=htGfnF1zN4g
     flex-direction: column;
     flex-grow: 1;
 
-    background: rgb(23, 23, 23);
+    background: rgb(0, 0, 0, 0.5);
     border-radius: inherit;
 }

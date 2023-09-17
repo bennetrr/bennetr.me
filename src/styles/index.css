@@ -19,8 +19,7 @@ body {
     line-height: 20px;
     font-size: 16px;
 
-    /*background: linear-gradient(180deg, rgb(35, 51, 60) 0%, rgb(35, 51, 60) 0.01%, rgb(43, 48, 50) 31.25%) 0 0 / cover;*/
-    background: rgb(20, 20, 20);
+    background: linear-gradient(180deg, rgb(35, 51, 60) 0%, rgb(35, 51, 60) 0.01%, rgb(43, 48, 50) 31.25%) 0 0 / cover;
 
     display: flex;
     flex-direction: row;
