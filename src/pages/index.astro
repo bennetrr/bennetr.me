@@ -29,8 +29,8 @@ const projects = await getCollection("projects");
                         .filter(element => element.classList.contains("card"))
                         .forEach((card: HTMLDivElement) => {
                             const rect = card.getBoundingClientRect();
-                            card.style.setProperty("--mouse-x", `${event.clientX - rect.left}`);
-                            card.style.setProperty("--mouse-y", `${event.clientY - rect.top}`);
+                            card.style.setProperty("--mouse-x", `${event.clientX - rect.left}px`);
+                            card.style.setProperty("--mouse-y", `${event.clientY - rect.top}px`);
                         });
                     };
                 });
