@@ -1,11 +1,11 @@
 .link-container {
     --width: fit-content;
     --flex-direction: column;
-    --gap: 20px;
+    --gap: 3rem;
 }
 
 .link-card {
-    --dimensions: 50px;
+    --dimensions: 6rem;
     width: var(--dimensions);
     height: var(--dimensions);
     border-radius: 50%;

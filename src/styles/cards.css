@@ -5,13 +5,17 @@ Thanks to Hyperplexed: https://www.youtube.com/watch?v=htGfnF1zN4g
 .card-container {
     width: var(--width);
     height: 100%;
-    padding: 40px;
+    padding: 5rem;
 
     display: flex;
     flex-direction: var(--flex-direction);
     justify-content: center;
     align-items: center;
     gap: var(--gap);
+}
+
+.card-container a:hover {
+    color: var(--color-fg);
 }
 
 .card-container:hover > .card::after {
@@ -25,8 +29,6 @@ Thanks to Hyperplexed: https://www.youtube.com/watch?v=htGfnF1zN4g
     flex-direction: column;
 
     background-color: rgba(255, 255, 255, 0.1);
-    color: var(--color-fg);
-    text-decoration: none;
 }
 
 .card:hover::before {
@@ -50,22 +52,22 @@ Thanks to Hyperplexed: https://www.youtube.com/watch?v=htGfnF1zN4g
 }
 
 .card::before {
-    --radius: 600px;
+    --radius: 75rem;
     --alpha: 0.03;
     --z: 3;
 }
 
 .card::after {
-    --radius: 400px;
+    --radius: 50rem;
     --alpha: 0.2;
     --z: 1;
 }
 
 .card > .card-content {
     position: absolute;
-    inset: 1px;
+    inset: 0.1rem;
     z-index: 2;
-    padding: 10px;
+    padding: 1.25rem;
 
     display: flex;
     flex-direction: column;

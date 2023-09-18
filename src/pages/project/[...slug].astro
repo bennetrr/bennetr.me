@@ -1,0 +1,52 @@
+---
+import {getCollection} from "astro:content";
+import type {GetStaticPathsResult, InferGetStaticParamsType, InferGetStaticPropsType} from "astro";
+
+import "@fontsource/inter";
+import "$styles/global.css";
+import "$styles/project-page.css";
+
+export async function getStaticPaths(): Promise<GetStaticPathsResult> {
+    return (await getCollection("projects")).map(entry => ({
+        params: {slug: entry.slug}, props: {entry}
+    }));
+}
+
+type Params = InferGetStaticParamsType<typeof getStaticPaths>;
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const {entry} = Astro.props;
+const {title, links} = entry.data;
+const {Content} = await entry.render();
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>{title} | bennetr</title>
+</head>
+<body>
+<a class="back-btn" href="/">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <path d="M128 136c0-22.1-17.9-40-40-40L40 96C17.9 96 0 113.9 0 136l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40l0-48zm0 192c0-22.1-17.9-40-40-40H40c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM288 328c0-22.1-17.9-40-40-40H200c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM448 328c0-22.1-17.9-40-40-40H360c-22.1 0-40 17.9-40 40v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328z"/>
+    </svg>
+</a>
+
+<main>
+    <aside>
+        <h2>Links</h2>
+        {links.map(link => <a href={link.url} target="_blank">{link.name}</a>)}
+    </aside>
+
+    <article>
+        <h1>{title}</h1>
+        <Content/>
+    </article>
+</main>
+<div class="bg-pattern"/>
+</body>
+</html>

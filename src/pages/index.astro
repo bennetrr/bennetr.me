@@ -2,11 +2,12 @@
 import {getCollection} from "astro:content";
 
 import "@fontsource/inter";
-import "../styles/index.css";
-import "../styles/cards.css";
+import "$styles/global.css";
+import "$styles/index.css";
+import "$styles/cards.css";
 
-import Link from "../components/Link.astro";
-import Project from "../components/Project.astro";
+import Link from "$components/Link.astro";
+import Project from "$components/Project.astro";
 
 type collectionWithIndex = Partial<{data: {index: number}}>
 const compareByIndex = (a: collectionWithIndex, b: collectionWithIndex) => a.data.index - b.data.index;
@@ -40,14 +41,18 @@ const projects = (await getCollection("projects")).sort(compareByIndex);
         </script>
     </head>
     <body>
-        <div class="card-container link-container">
-            {links.map(x => <Link id={x.id}/>)}
-        </div>
-
-        <div class="card-container project-container">
-            {projects.map(x => <Project id={x.slug}/>)}
-        </div>
-
         <div class="bg-pattern"/>
+
+        <main>
+            <article class="card-container link-container">
+                {links.map(x =>
+                        <Link id={x.id}/>)}
+            </article>
+
+            <article class="card-container project-container">
+                {projects.map(x =>
+                        <Project id={x.slug}/>)}
+            </article>
+        </main>
     </body>
 </html>

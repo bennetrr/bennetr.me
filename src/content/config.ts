@@ -16,7 +16,12 @@ export const collections = {
             title: z.string(),
             description: z.string(),
             technologies: z.array(z.string()),
-            link: z.optional(z.string())
+            link: z.string().optional(),
+            links: z.array(z.object({
+                name: z.string(),
+                url: z.string().url(),
+                icon: z.string().optional()
+            }))
         })
     })
 };
