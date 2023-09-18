@@ -8,8 +8,11 @@ import "../styles/cards.css";
 import Link from "../components/Link.astro";
 import Project from "../components/Project.astro";
 
-const links = await getCollection("links");
-const projects = await getCollection("projects");
+type collectionWithIndex = Partial<{data: {index: number}}>
+const compareByIndex = (a: collectionWithIndex, b: collectionWithIndex) => a.data.index - b.data.index;
+
+const links = (await getCollection("links")).sort(compareByIndex);
+const projects = (await getCollection("projects")).sort(compareByIndex);
 ---
 
 <!DOCTYPE html>
