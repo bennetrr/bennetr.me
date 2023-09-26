@@ -27,7 +27,7 @@ body {
     line-height: 20px;
     font-size: 2rem;
 
-    background: linear-gradient(180deg, rgb(35, 51, 60) 0%, rgb(35, 51, 60) 0.01%, rgb(43, 48, 50) 31.25%) 0 0 / cover;
+    background: rgb(25, 28, 28);
 }
 
 a {
@@ -36,7 +36,7 @@ a {
 }
 
 a:hover {
-    color: var(--color-fg);
+    color: var(--color-accent);
 }
 
 .bg-pattern {
@@ -48,5 +48,5 @@ a:hover {
     left: 0;
     z-index: -1;
 
-    background: radial-gradient(rgba(2255, 255, 255, 0.1) 9%, transparent 9%) 0 0 / 2vmin 2vmin;
+    background: radial-gradient(rgba(255, 255, 255, 0.07) 9%, transparent 9%) 0 0 / 1.8vmin 1.8vmin;
 }

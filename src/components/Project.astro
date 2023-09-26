@@ -1,8 +1,8 @@
 ---
 import {getEntry} from "astro:content";
 import {Image} from "astro:assets";
-import "../styles/project-card.css";
 import "../styles/cards.css";
+import "../styles/project-card.css";
 
 interface Props {
     id: string;
@@ -12,7 +12,7 @@ const {id} = Astro.props;
 const {data: {title, description, technologies, link}, slug} = await getEntry("projects", id);
 ---
 
-<a class="card project-card" href={link || `/project/${slug}`} title={title} target="_blank">
+<a class="card project-card" href={link || `/project/${slug}`} title={title}>
     <div class="card-content">
         <span class="project-title">{title}</span>
         <p class="project-description">{description}</p>
