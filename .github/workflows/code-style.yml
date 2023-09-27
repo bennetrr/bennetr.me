@@ -38,7 +38,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Set up problem matchers
-        run: echo "::add-matcher::problem-matcher-astro-check.json"
+        run: echo "::add-matcher::.github/workflows/problem-matcher-astro-check.json"
 
       - name: Install dependencies
         run: pnpm install
