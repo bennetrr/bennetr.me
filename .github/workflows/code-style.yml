@@ -17,25 +17,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup node
+      - name: Set up node
         uses: actions/setup-node@v3
         with:
          node-version-file: package.json
 
-      - name: Setup pnpm
+      - name: Set up pnpm
         uses: pnpm/action-setup@v2.4.0
 
       - name: Get pnpm store directory
         run: |
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - name: Setup pnpm cache
+      - name: Set up pnpm cache
         uses: actions/cache@v3
         with:
           path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
+
+      - name: Set up problem matchers
+        run: echo "::add-matcher::problem-matcher-astro-check.json"
 
       - name: Install dependencies
         run: pnpm install
