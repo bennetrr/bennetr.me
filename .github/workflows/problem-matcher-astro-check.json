@@ -1,15 +1,16 @@
 {
   "problemMatcher": {
-    "owner": "bennetrr/astro-check",
+    "owner": "problem-matcher-astro-check",
     "fileLocation": ["relative", "${workspaceFolder}"],
     "pattern": [
       {
-        "regexp": "^(.*):(\\d+):(\\d+) - error ts\\(\\d+\\): (.*)$",
+        "regexp": "^(.+):(\\d+):(\\d+) - (hint|warning|error) (ts\\(\\d+\\)): (.*)$",
         "file": 1,
         "line": 2,
         "column": 3,
-        "severity": "error",
-        "message": 4
+        "severity": 4,
+        "code": 5,
+        "message": 6
       }
     ]
   }
