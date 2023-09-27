@@ -1,7 +1,6 @@
 {
   "problemMatcher": {
     "owner": "problem-matcher-astro-check",
-    "fileLocation": ["relative", "${workspaceFolder}"],
     "pattern": [
       {
         "regexp": "^(.+):(\\d+):(\\d+) - (hint|warning|error) (ts\\(\\d+\\)): (.*)$",
