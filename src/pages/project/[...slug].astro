@@ -7,9 +7,9 @@ import "$styles/global.css";
 import "$styles/project-page.css";
 
 export async function getStaticPaths(): Promise<GetStaticPathsResult> {
-    return (await getCollection("projects")).map(entry => ({
-        params: {slug: entry.slug}, props: {entry}
-    }));
+    return (await getCollection("projects"))
+        .filter(entry => !entry.data.link)
+        .map(entry => ({params: {slug: entry.slug}, props: {entry}}));
 }
 
 type Params = InferGetStaticParamsType<typeof getStaticPaths>;

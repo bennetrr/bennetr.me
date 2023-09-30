@@ -2,6 +2,7 @@
     --width: fit-content;
     --flex-direction: column;
     --gap: 3rem;
+    --content-padding: 1.3rem;
 }
 
 .link-card {

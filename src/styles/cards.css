@@ -10,7 +10,6 @@ Thanks to Hyperplexed: https://www.youtube.com/watch?v=htGfnF1zN4g
     display: flex;
     flex-direction: var(--flex-direction);
     justify-content: center;
-    align-items: center;
     gap: var(--gap);
 }
 
@@ -67,7 +66,7 @@ Thanks to Hyperplexed: https://www.youtube.com/watch?v=htGfnF1zN4g
     position: absolute;
     inset: 0.1rem;
     z-index: 2;
-    padding: 1.25rem;
+    padding: var(--content-padding);
 
     display: flex;
     flex-direction: column;

@@ -1,8 +1,12 @@
 .project-container {
-    --width: 100%;
+    --width: 75%;
     --flex-direction: row;
-    --gap: 1rem;
+    --gap: 3rem;
+    --content-padding: 2rem;
+    margin: 0 auto;
     flex-wrap: wrap;
+
+    place-content: center;
 }
 
 .project-card {
@@ -19,14 +23,14 @@
 
 .technology-icon-container {
     position: absolute;
-    bottom: 1.25rem;
-    left: 1.25rem;
+    bottom: 2rem;
+    left: 2rem;
 
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .technology-icon {
     width: auto;
-    height: 3rem;
+    height: 2.5rem;
 }
