@@ -1,4 +1,4 @@
-name: Code style check
+name: Test build
 
 on:
   pull_request:
@@ -10,8 +10,8 @@ permissions:
   contents: read
 
 jobs:
-  astro-check:
-    name: astro check
+  build:
+    name: Build astro page
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -23,14 +23,11 @@ jobs:
       - name: Set up node
         uses: actions/setup-node@v3
         with:
-         node-version-file: package.json
-         cache: 'pnpm'
+          node-version-file: package.json
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install
 
-      - name: Set up problem matchers
-        run: echo "::add-matcher::.github/workflows/problem-matcher-astro-check.json"
-
-      - name: Run astro check
-        run: pnpm check
+      - name: Run astro build
+        run: pnpm build
