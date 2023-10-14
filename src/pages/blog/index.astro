@@ -1,0 +1,18 @@
+---
+import {Section, GradientText as GT, BlogPostList} from '$components';
+import {type IBlogPostFrontMatter, comparePosts} from '$types';
+import {Base} from '$templates';
+
+const posts = (await Astro.glob<IBlogPostFrontMatter>('./*.md'))
+  .sort(comparePosts);
+---
+
+<Base head={{title: 'bennetr', description: 'bennetr\'s Homepage'}}>
+  <Section>
+    <Fragment slot="title">
+      All <GT>Blog Posts</GT>
+    </Fragment>
+
+    <BlogPostList {posts}/>
+  </Section>
+</Base>

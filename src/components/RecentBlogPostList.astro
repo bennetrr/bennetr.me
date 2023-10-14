@@ -1,0 +1,23 @@
+---
+import {Section, GradientText as GT, BlogPostList} from '$components';
+import {type IBlogPostFrontMatter, comparePosts} from '$types';
+
+const posts = (await Astro.glob<IBlogPostFrontMatter>('../pages/blog/*.md'))
+  .sort(comparePosts)
+  .slice(0, 3);
+
+---
+
+<Section>
+  <Fragment slot="title">
+    <div class="flex items-baseline justify-between">
+      <span>Recent <GT>Blog Posts</GT></span>
+
+      <a href="/blog/">
+        <span class="text-sm">View all Posts →</span>
+      </a>
+    </div>
+  </Fragment>
+
+  <BlogPostList {posts}/>
+</Section>

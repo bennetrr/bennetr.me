@@ -1,0 +1,32 @@
+---
+import type {IBlogPostFrontMatter} from '$types';
+import {Section} from '$components';
+import {DateTime} from "luxon";
+import {Image} from "astro:assets";
+interface Props {
+  frontmatter: IBlogPostFrontMatter;
+  children: any;
+}
+
+const {frontmatter} = Astro.props;
+---
+
+<Section>
+  <h1 class="text-center text-3xl font-bold">
+    {frontmatter.title}
+  </h1>
+
+  <div class="mt-2 text-center text-sm text-gray-400">
+    By bennetr on {DateTime.fromISO(frontmatter.pubDate).toLocaleString(DateTime.DATE_HUGE)}
+  </div>
+
+  <div class="mx-auto mt-5 max-w-prose">
+    <div class="aspect-w-3 aspect-h-2">
+      <Image class="h-full w-full object-cover object-center" src={import((frontmatter.imgSrc))} alt={frontmatter.imgAlt}/>
+    </div>
+
+    <div class="prose prose-invert mt-8 prose-img:rounded-lg">
+      <slot/>
+    </div>
+  </div>
+</Section>

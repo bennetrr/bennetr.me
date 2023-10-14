@@ -1,0 +1,22 @@
+---
+import {Section, GradientText as GT, Project, CategoryColors} from '$components';
+---
+
+<Section>
+  <Fragment slot="title">
+    My <GT>Projects</GT>
+  </Fragment>
+
+  <div class="flex flex-col gap-6">
+    <Project
+      name="WeckPi"
+      description="Extensible alarm clock software built for the Raspberry Pi with music streaming and other cool features."
+      url="https://github.com/bennetrr/weckpi/tree/dev"
+      categories={[
+        {name: 'Python', color: CategoryColors.BLUE},
+        {name: 'JavaScript', color: CategoryColors.YELLOW},
+        {name: 'SvelteKit', color: CategoryColors.ORANGE},
+      ]}
+    />
+  </div>
+</Section>

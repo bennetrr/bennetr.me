@@ -1,0 +1,31 @@
+---
+import {Footer, Navbar} from '$components';
+import './global.css';
+
+interface Props {
+  head: {
+    title: string;
+    description: string;
+  };
+}
+
+const {head: {title, description}} = Astro.props as Props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content={description}/>
+    <meta name="author" content="bennetr"/>
+    <title>{title}</title>
+
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  </head>
+  <body class="h-full bg-slate-900 text-gray-100">
+    <Navbar/>
+    <slot/>
+    <Footer/>
+  </body>
+</html>
