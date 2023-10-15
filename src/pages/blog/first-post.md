@@ -1,10 +1,11 @@
 ---
-layout: '$templates/BasePost.astro'
+layout: '$/components/templates/BasePost.astro'
 title: 5th Lorem ipsum dolor sit
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi.
-pubDate: 2020-02-05
-imgSrc: '../images/github.svg'
-imgAlt: 'Image post 2'
+publicationDate: 2020-02-05
+image:
+  src: 'github.svg'
+  alt: 'Image post 2'
 ---
 
 This is a paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.

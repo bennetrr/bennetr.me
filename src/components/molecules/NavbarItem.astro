@@ -1,5 +1,5 @@
 ---
-interface Props{
+interface Props {
   url: string;
   title: string;
   newTab?: boolean;
@@ -9,5 +9,7 @@ const {url, title, newTab} = Astro.props;
 ---
 
 <a href={url} target={newTab ? '_blank' : '_self'}>
-  <span class="hover:text-white">{title}</span>
+  <span class="hover:text-white">
+    {title}
+  </span>
 </a>

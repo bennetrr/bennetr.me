@@ -1,5 +1,8 @@
 ---
-import {Section, GradientText as GT, Project, CategoryColors} from '$components';
+import {CategoryColors} from '$/types';
+import Section from '$/components/atoms/Section.astro';
+import {default as GT} from '$/components/atoms/GradientText.astro';
+import ProjectCard from '$/components/molecules/ProjectCard.astro';
 ---
 
 <Section>
@@ -8,14 +11,14 @@ import {Section, GradientText as GT, Project, CategoryColors} from '$components'
   </Fragment>
 
   <div class="flex flex-col gap-6">
-    <Project
+    <ProjectCard
       name="WeckPi"
       description="Extensible alarm clock software built for the Raspberry Pi with music streaming and other cool features."
       url="https://github.com/bennetrr/weckpi/tree/dev"
       categories={[
         {name: 'Python', color: CategoryColors.BLUE},
         {name: 'JavaScript', color: CategoryColors.YELLOW},
-        {name: 'SvelteKit', color: CategoryColors.ORANGE},
+        {name: 'SvelteKit', color: CategoryColors.ORANGE}
       ]}
     />
   </div>

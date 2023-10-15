@@ -1,4 +1,3 @@
----
 export enum CategoryColors {
   SLATE = 'bg-slate-400 text-slate-900',
   GRAY = 'bg-gray-400 text-gray-900',
@@ -24,16 +23,7 @@ export enum CategoryColors {
   ROSE = 'bg-rose-400 text-rose-900',
 }
 
-interface Props {
+export interface ICategory {
   name: string;
   color: CategoryColors;
 }
-
-export {Props as ICategory};
-
-const {name, color} = Astro.props;
----
-
-<div class={`rounded-md px-2 py-1 text-xs font-semibold ${color}`}>
-  {name}
-</div>
