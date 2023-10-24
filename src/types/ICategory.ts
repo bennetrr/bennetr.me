@@ -23,7 +23,20 @@ export enum CategoryColors {
   ROSE = 'bg-rose-400 text-rose-900',
 }
 
-export interface ICategory {
+export const Categories = Object.freeze({
+  ASTRO: {name: 'Astro', color: CategoryColors.INDIGO},
+  ASTRO_STARLIGHT: {name: 'Astro Starlight', color: CategoryColors.STONE},
+  GREENFOOT: {name: 'Greenfoot', color: CategoryColors.LIME},
+  JAVA: {name: 'Java', color: CategoryColors.AMBER},
+  JAVASCRIPT: {name: 'JavaScript', color: CategoryColors.YELLOW},
+  LANG_GER: {name: 'Language: German', color: CategoryColors.SLATE},
+  PYTHON: {name: 'Python', color: CategoryColors.BLUE},
+  REACT: {name: 'React', color: CategoryColors.SKY},
+  SCHOOL: {name: 'School Project', color: CategoryColors.SLATE},
+  SVELTE_KIT: {name: 'SvelteKit', color: CategoryColors.ORANGE}
+}) satisfies {[key: string]: ICategory};
+
+export type ICategory = {
   name: string;
   color: CategoryColors;
 }

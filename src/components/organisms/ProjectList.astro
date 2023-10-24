@@ -1,5 +1,5 @@
 ---
-import {CategoryColors} from '$/types';
+import {CategoryColors, Categories} from '$/types';
 import Section from '$/components/atoms/Section.astro';
 import {default as GT} from '$/components/atoms/GradientText.astro';
 import ProjectCard from '$/components/molecules/ProjectCard.astro';
@@ -16,9 +16,51 @@ import ProjectCard from '$/components/molecules/ProjectCard.astro';
       description="Extensible alarm clock software built for the Raspberry Pi with music streaming and other cool features."
       url="https://github.com/bennetrr/weckpi/tree/dev"
       categories={[
-        {name: 'Python', color: CategoryColors.BLUE},
-        {name: 'JavaScript', color: CategoryColors.YELLOW},
-        {name: 'SvelteKit', color: CategoryColors.ORANGE}
+        Categories.PYTHON,
+        Categories.JAVASCRIPT,
+        Categories.SVELTE_KIT
+      ]}
+    />
+    <ProjectCard
+      name="bennetr.me"
+      description="My homepage and blog. You're on it right now!"
+      url="https://github.com/bennetrr/bennetr.me"
+      categories={[
+        Categories.JAVASCRIPT,
+        Categories.ASTRO
+      ]}
+    />
+    <ProjectCard
+      name="Softroboter Docs"
+      description="Documentation for our Softroboter project, a gripper made out of elastomer, mounted to a robot arm."
+      url="https://softroboter.docs.bennetr.me"
+      categories={[
+        Categories.LANG_GER,
+        Categories.SCHOOL,
+        Categories.JAVASCRIPT,
+        Categories.ASTRO_STARLIGHT
+      ]}
+    />
+    <ProjectCard
+      name="Covid Simulation"
+      description="Simulate the course of a COVID-19 infection wave with many parameters and settings. "
+      url="https://softroboter.docs.bennetr.me"
+      categories={[
+        Categories.LANG_GER,
+        Categories.SCHOOL,
+        Categories.JAVA,
+        Categories.GREENFOOT
+      ]}
+    />
+    <ProjectCard
+      name="Lesetagebuch: Franz Kafka - Der Process"
+      url="https://der-process.bennetr.me"
+      categories={[
+        Categories.LANG_GER,
+        Categories.SCHOOL,
+        Categories.JAVASCRIPT,
+        Categories.ASTRO,
+        Categories.REACT
       ]}
     />
   </div>

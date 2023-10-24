@@ -15,7 +15,7 @@ const {name, description, url, image, categories} = Astro.props;
 ---
 
 <a href={url} target="_blank">
-  <article class="hover:translate-y-1 flex flex-col items-center gap-x-8 rounded-md bg-stone-800 p-3 md:flex-row">
+  <article class="hover:translate-y-1 flex flex-col gap-x-8 rounded-md bg-stone-800 p-3 md:flex-row min-h-[88px]">
 
     {!image ? null :
       <div class="shrink-0">
