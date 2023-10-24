@@ -10,6 +10,7 @@ module.exports = {
               backgroundColor: theme('colors.stone.800'),
               padding: '0.2rem 0.25rem',
               fontWeight: '400',
+              fontFamily: '"JetBrains Mono Variable", monospace',
               'border-radius': '0.25rem'
             },
             'code::before': {
@@ -19,11 +20,13 @@ module.exports = {
               content: '""'
             },
             pre: {
+              fontFamily: '"JetBrains Mono Variable", monospace',
               backgroundColor: `${theme('colors.stone.800')} !important`
             }
           }
         }
-      })
+      }),
+
     }
   },
   plugins: [
