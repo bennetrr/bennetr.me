@@ -1,8 +1,7 @@
 ---
-import type {LocalImageProps, RemoteImageProps} from 'astro:assets';
 import {Image as AstroImage} from 'astro:assets';
 
-interface Props extends (typeof AstroImage) {}
+type Props = typeof AstroImage;
 ---
 
 <AstroImage {...Astro.props}/>
