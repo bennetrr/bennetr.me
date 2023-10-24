@@ -23,10 +23,11 @@ const {frontmatter: {title, publicationDate, image}} = Astro.props;
 
   <div class="mx-auto mt-5 max-w-prose">
     <div class="aspect-w-3 aspect-h-2">
-      <Image
+      <img
         class="h-full w-full object-cover object-center"
-        src={import((`../../images/${image.src}`))}
+        src={image.src}
         alt={image.alt}
+        loading="lazy"
       />
     </div>
 

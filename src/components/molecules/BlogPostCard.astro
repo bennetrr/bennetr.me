@@ -14,10 +14,11 @@ const {post: {url, frontmatter: {title, description, publicationDate, image}}} =
 <a href={url}>
   <article class="hover:translate-y-1 overflow-hidden rounded-md bg-stone-800">
     <div class="aspect-w-3 aspect-h-2">
-      <Image
+      <img
         class="h-full w-full object-cover object-center"
-        src={import((`../../images/${image.src}`))}
+        src={image.src}
         alt={image.alt}
+        loading="lazy"
       />
     </div>
 
