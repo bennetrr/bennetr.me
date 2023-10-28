@@ -33,7 +33,8 @@ export const Categories = Object.freeze({
   PYTHON: {name: 'Python', color: CategoryColors.BLUE},
   REACT: {name: 'React', color: CategoryColors.SKY},
   SCHOOL: {name: 'School Project', color: CategoryColors.SLATE},
-  SVELTE_KIT: {name: 'SvelteKit', color: CategoryColors.ORANGE}
+  SVELTE_KIT: {name: 'SvelteKit', color: CategoryColors.ORANGE},
+  NEXT_JS: {name: 'Next.js', color: CategoryColors.NEUTRAL}
 }) satisfies {[key: string]: ICategory};
 
 export type ICategory = {
