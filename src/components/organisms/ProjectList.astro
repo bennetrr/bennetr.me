@@ -7,7 +7,17 @@ import ProjectCard from '$/components/molecules/ProjectCard.astro';
 
 <Section>
   <Fragment slot="title">
-    My <GT>Projects</GT>
+     <div class="flex items-baseline justify-between">
+      <span>
+        My <GT>Projects</GT>
+      </span>
+
+      <a href="https://github.com/bennetrr/?tab=repositories">
+        <span class="text-sm">
+          View all Projects →
+        </span>
+      </a>
+    </div>
   </Fragment>
 
   <div class="flex flex-col gap-6">
@@ -21,15 +31,29 @@ import ProjectCard from '$/components/molecules/ProjectCard.astro';
         Categories.SVELTE_KIT
       ]}
     />
+
     <ProjectCard
-      name="bennetr.me"
-      description="My homepage and blog. You're on it right now!"
-      url="https://github.com/bennetrr/bennetr.me"
+      name="Bedwars"
+      description="Hypixel-inspired bedwars plugin for Minecraft 1.17.1 build for Paper servers."
+      url="https://github.com/bennetrr/bedwars"
       categories={[
-        Categories.JAVASCRIPT,
-        Categories.ASTRO
+        Categories.JAVA,
+        Categories.MINECRAFT,
+        Categories.BUKKIT
       ]}
     />
+
+    <!--<ProjectCard
+      name="LegoApp"
+      description="Web app that helps to check if all parts of a Lego set are present."
+      url="https://github.com/bennetrr/lego"
+      categories={[
+        Categories.CSHARP,
+        Categories.JAVASCRIPT,
+        Categories.REACT
+      ]}
+    />-->
+
     <ProjectCard
       name="Softroboter Docs"
       description="Documentation for our Softroboter project, a gripper made out of elastomer, mounted to a robot arm."
@@ -41,17 +65,7 @@ import ProjectCard from '$/components/molecules/ProjectCard.astro';
         Categories.ASTRO_STARLIGHT
       ]}
     />
-    <ProjectCard
-      name="Covid Simulation"
-      description="Simulate the course of a COVID-19 infection wave with many parameters and settings. "
-      url="https://softroboter.docs.bennetr.me"
-      categories={[
-        Categories.LANG_GER,
-        Categories.SCHOOL,
-        Categories.JAVA,
-        Categories.GREENFOOT
-      ]}
-    />
+
     <ProjectCard
       name="Lesetagebuch: Franz Kafka - Der Process"
       url="https://der-process.bennetr.me"
@@ -61,6 +75,18 @@ import ProjectCard from '$/components/molecules/ProjectCard.astro';
         Categories.JAVASCRIPT,
         Categories.REACT,
         Categories.NEXT_JS
+      ]}
+    />
+
+    <ProjectCard
+      name="Covid Simulation"
+      description="Simulate the course of a COVID-19 infection wave with many parameters and settings. "
+      url="https://softroboter.docs.bennetr.me"
+      categories={[
+        Categories.LANG_GER,
+        Categories.SCHOOL,
+        Categories.JAVA,
+        Categories.GREENFOOT
       ]}
     />
   </div>
