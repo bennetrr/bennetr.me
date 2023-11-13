@@ -24,8 +24,8 @@ dependencies:
     specifier: ^3.4.3
     version: 3.4.3(typescript@5.2.2)
   luxon:
-    specifier: ^3.4.3
-    version: 3.4.3
+    specifier: ^3.4.4
+    version: 3.4.4
   sharp:
     specifier: ^0.32.6
     version: 0.32.6
@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^0.3.1
     version: 0.3.1(typescript@5.2.2)
   '@types/luxon':
-    specifier: ^3.3.3
-    version: 3.3.3
+    specifier: ^3.3.4
+    version: 3.3.4
   typescript:
     specifier: ^5.2.2
     version: 5.2.2
@@ -946,8 +946,8 @@ packages:
       '@types/unist': 3.0.0
     dev: false
 
-  /@types/luxon@3.3.3:
-    resolution: {integrity: sha512-/BJF3NT0pRMuxrenr42emRUF67sXwcZCd+S1ksG/Fcf9O7C3kKCY4uJSbKBE4KDUIYr3WMsvfmWD8hRjXExBJQ==}
+  /@types/luxon@3.3.4:
+    resolution: {integrity: sha512-H9OXxv4EzJwE75aTPKpiGXJq+y4LFxjpsdgKwSmr503P5DkWc3AG7VAFYrFNVvqemT5DfgZJV9itYhqBHSGujA==}
     dev: true
 
   /@types/mdast@3.0.13:
@@ -2329,8 +2329,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /luxon@3.4.3:
-    resolution: {integrity: sha512-tFWBiv3h7z+T/tDaoxA8rqTxy1CHV6gHS//QdaH4pulbq/JuBSGgQspQQqcgnwdAx6pNI7cmvz5Sv/addzHmUg==}
+  /luxon@3.4.4:
+    resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==}
     engines: {node: '>=12'}
     dev: false
 
