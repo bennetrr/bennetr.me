@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^0.3.1
     version: 0.3.1(typescript@5.3.2)
   '@types/luxon':
-    specifier: ^3.3.4
-    version: 3.3.4
+    specifier: ^3.3.7
+    version: 3.3.7
   typescript:
     specifier: ^5.3.2
     version: 5.3.2
@@ -951,8 +951,8 @@ packages:
       '@types/unist': 3.0.0
     dev: false
 
-  /@types/luxon@3.3.4:
-    resolution: {integrity: sha512-H9OXxv4EzJwE75aTPKpiGXJq+y4LFxjpsdgKwSmr503P5DkWc3AG7VAFYrFNVvqemT5DfgZJV9itYhqBHSGujA==}
+  /@types/luxon@3.3.7:
+    resolution: {integrity: sha512-gKc9P2d4g5uYwmy4s/MO/yOVPmvHyvzka1YH6i5dM03UrFofHSmgc0D0ymbDRStFWHusk6cwwF6nhLm/ckBbbQ==}
     dev: true
 
   /@types/mdast@3.0.13:
