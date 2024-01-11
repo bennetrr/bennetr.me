@@ -10,16 +10,16 @@ dependencies:
     version: 3.0.0
   '@astrojs/tailwind':
     specifier: ^5.0.2
-    version: 5.0.2(astro@3.6.1)(tailwindcss@3.3.5)
+    version: 5.0.2(astro@3.6.1)(tailwindcss@3.4.1)
   '@fontsource-variable/jetbrains-mono':
     specifier: ^5.0.18
     version: 5.0.18
   '@tailwindcss/aspect-ratio':
     specifier: ^0.4.2
-    version: 0.4.2(tailwindcss@3.3.5)
+    version: 0.4.2(tailwindcss@3.4.1)
   '@tailwindcss/typography':
     specifier: ^0.5.10
-    version: 0.5.10(tailwindcss@3.3.5)
+    version: 0.5.10(tailwindcss@3.4.1)
   astro:
     specifier: ^3.6.1
     version: 3.6.1(typescript@5.3.2)
@@ -30,16 +30,16 @@ dependencies:
     specifier: ^0.32.6
     version: 0.32.6
   tailwindcss:
-    specifier: ^3.3.5
-    version: 3.3.5
+    specifier: ^3.4.1
+    version: 3.4.1
 
 devDependencies:
   '@astrojs/check':
     specifier: ^0.3.1
     version: 0.3.1(typescript@5.3.2)
   '@types/luxon':
-    specifier: ^3.3.4
-    version: 3.3.4
+    specifier: ^3.4.0
+    version: 3.4.0
   typescript:
     specifier: ^5.3.2
     version: 5.3.2
@@ -160,7 +160,7 @@ packages:
       kleur: 4.1.5
     dev: false
 
-  /@astrojs/tailwind@5.0.2(astro@3.6.1)(tailwindcss@3.3.5):
+  /@astrojs/tailwind@5.0.2(astro@3.6.1)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-oXqeqmBlkQmsltrsU9nEWeXOtrZIAHW8dcmX7BCdrjzPnU6dPwWzAwhddNQ9ihKiWwsLnlbwQZIo2CDigcZlIA==}
     peerDependencies:
       astro: ^3.2.4
@@ -170,7 +170,7 @@ packages:
       autoprefixer: 10.4.16(postcss@8.4.31)
       postcss: 8.4.31
       postcss-load-config: 4.0.1(postcss@8.4.31)
-      tailwindcss: 3.3.5
+      tailwindcss: 3.4.1
     transitivePeerDependencies:
       - ts-node
     dev: false
@@ -880,15 +880,15 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.3.5):
+  /@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.4.1):
     resolution: {integrity: sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==}
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.3.5
+      tailwindcss: 3.4.1
     dev: false
 
-  /@tailwindcss/typography@0.5.10(tailwindcss@3.3.5):
+  /@tailwindcss/typography@0.5.10(tailwindcss@3.4.1):
     resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -897,7 +897,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.3.5
+      tailwindcss: 3.4.1
     dev: false
 
   /@types/babel__core@7.20.2:
@@ -951,8 +951,8 @@ packages:
       '@types/unist': 3.0.0
     dev: false
 
-  /@types/luxon@3.3.4:
-    resolution: {integrity: sha512-H9OXxv4EzJwE75aTPKpiGXJq+y4LFxjpsdgKwSmr503P5DkWc3AG7VAFYrFNVvqemT5DfgZJV9itYhqBHSGujA==}
+  /@types/luxon@3.4.0:
+    resolution: {integrity: sha512-PEVoA4MOfSsFNaPrZjIUGUZujBDxnO/tj2A2N9KfzlR+pNgpBdDuk0TmRvSMAVUP5q4q8IkMEZ8UOp3MIr+QgA==}
     dev: true
 
   /@types/mdast@3.0.13:
@@ -3682,8 +3682,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /tailwindcss@3.3.5:
-    resolution: {integrity: sha512-5SEZU4J7pxZgSkv7FP1zY8i2TIAOooNZ1e/OGtxIEv6GltpoiXUqWvLy89+a10qYTB1N5Ifkuw9lqQkN9sscvA==}
+  /tailwindcss@3.4.1:
+    resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
