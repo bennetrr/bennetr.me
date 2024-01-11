@@ -5,7 +5,8 @@ export interface IBlogPostFrontmatter {
   title: string;
   description: string;
   publicationDate: string;
-  image: IImage;
+  image?: IImage;
+  hidden?: boolean;
 }
 
 export interface IBlogPostMarkdownInstance extends MarkdownInstance<IBlogPostFrontmatter> {}

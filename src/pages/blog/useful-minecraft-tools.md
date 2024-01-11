@@ -3,9 +3,9 @@ layout: '$/components/templates/BasePost.astro'
 title: Useful Tools for Minecraft
 description: A list of useful tools and websites for developing stuff in Minecraft.
 publicationDate: 2023-10-18
-image:
-  src: '/assets/github.svg'
-  alt: 'Image post 2'
+#image:
+#  src: '/assets/github.svg'
+#  alt: 'Image post 2'
 ---
 
 ## Command Generators

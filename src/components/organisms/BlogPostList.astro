@@ -9,6 +9,7 @@ interface Props {
 const {numberOfPosts} = Astro.props;
 
 let posts = (await Astro.glob<IBlogPostFrontmatter>('../../pages/blog/*.md'))
+  .filter(post => !post.frontmatter.hidden)
   .sort(comparePosts);
 
 if (numberOfPosts) {

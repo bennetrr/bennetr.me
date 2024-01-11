@@ -21,14 +21,16 @@ const {frontmatter: {title, publicationDate, image}} = Astro.props;
   </p>
 
   <div class="mx-auto mt-5 max-w-prose">
-    <div class="aspect-w-3 aspect-h-2">
-      <img
-        class="h-full w-full object-cover object-center"
-        src={image.src}
-        alt={image.alt}
-        loading="lazy"
-      />
-    </div>
+    {!image ? null :
+      <div class="aspect-w-3 aspect-h-2">
+        <img
+          class="h-full w-full object-cover object-center"
+          src={image.src}
+          alt={image.alt}
+          loading="lazy"
+        />
+      </div>
+    }
 
     <div class="prose prose-invert mt-8 prose-img:rounded-lg">
       <slot/>

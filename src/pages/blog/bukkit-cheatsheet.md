@@ -3,9 +3,9 @@ layout: '$/components/templates/BasePost.astro'
 title: Bukkit API Cheatsheet
 description: Many code snippets for developing plugins with the Bukkit / Spigot / Paper API.
 publicationDate: 2023-10-24
-image:
-  src: '/assets/github.svg'
-  alt: 'Image post 2'
+#image:
+#  src: '/assets/github.svg'
+#  alt: 'Image post 2'
 ---
 
 ## Plugin generator for IntelliJ IDEA
