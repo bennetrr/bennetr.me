@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://bennetr.me',
   integrations: [
     tailwind(),
     sitemap({
@@ -12,5 +13,8 @@ export default defineConfig({
       lastmod: Date.now(),
     })
   ],
-  site: 'https://bennetr.me'
+  markdown: {
+    remarkPlugins: ['remark-gfm', 'remark-smartypants', 'remark-math'],
+    rehypePlugins: ['rehype-mathjax']
+  }
 });
