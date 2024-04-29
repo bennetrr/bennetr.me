@@ -19,7 +19,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/jetbrains-mono": "^5.0.20",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.13",
     "astro": "^4.7.0",
     "luxon": "^3.4.4",
     "rehype-mathjax": "^6.0.0",
